@@ -1,32 +1,40 @@
-# CMSC 315: Data Structures and Algorithms — Discussion Exercises
+# Unit 1 Discussion: Python OOP, Namespaces, and Copying
 
-Welcome! This repository serves as a centralized archive for my weekly programming discussion posts, implementations, and code experiments throughout **CMSC 315 (Data Structures and Analysis)**.
+## Overview
 
----
+This assignment explores object-oriented programming (OOP) concepts in Python, including inheritance, namespaces, and object copying.
 
-## 📂 Repository Structure & Navigation
+## Learning Objectives
 
-To keep the project clean and modular, each unit's code and accompanying write-ups are organized into dedicated feature branches rather than cluttering the root directory.
+- Create parent and child classes
+- Use inheritance to extend functionality
+- Understand class and instance namespaces
+- Demonstrate shallow and deep copying
+- Apply object-oriented design principles
 
-### 📌 Quick Branch Directory
+## Requirements
 
-| Unit | Topic Focus | Branch Link | Key Concepts / File |
-| :--- | :--- | :--- | :--- |
-| **Unit 1** | Object-Oriented Programming, Namespaces & Copying | [`unit1`](../../tree/unit1) | `unit1_discussion.py` — Inheritance, class variables, shallow vs. deep copy |
-| **Unit 2** | Stacks and Queues | [`unit2`](../../tree/unit2) | `unit2_discussion.py` — LIFO Stack & FIFO Queue implementations with `deque` |
-| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | Recursive data parsing & traversal |
-| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_trees.py` — Recursive insert, search, in-order traversal & edge cases |
-| **Unit 5** | *Upcoming Topic* | `unit5` | *TBD* |
+Complete all TODO sections in the source code:
 
----
+1. Create a parent class.
+2. Create a child class using inheritance.
+3. Demonstrate class and instance namespaces.
+4. Demonstrate shallow and deep copying.
+5. Create and test objects in `main()`.
+6. Add a student-created extension.
 
-## 🛠️ Usage & How to View
+## Discussion Board Reflection
 
-You can switch between weekly submissions using the branch selector menu at the top left of the repository page, or clone a specific branch locally:
+After completing the programming assignment, add this reflection to your initial discussion post in LEO.
 
-```bash
-# Clone the repository
-git clone [https://github.com/Argillego/cmsc315_discussions.git](https://github.com/Argillego/cmsc315_discussions.git)
+Your reflection should be approximately 150–200 words and address the following questions:
 
-# Switch to a specific unit's branch
-git checkout unit4
+1. What concepts or skills did you learn while completing this assignment?
+2. What challenges did you encounter, and how did you overcome them?
+3. Compare OOP to procedural programming.
+4. Discuss the benefits of maintainability and reusability and apply this managing overhead, practical application development, and future use.
+
+## Implementation Documentation
+- **Classes Created**: `Person` (parent) and `Student` (child inheriting from `Person`).
+- **Namespaces**: Implemented `demonstrate_namespaces()` to explore `__dict__` and instance vs. class variables.
+- **Copying**: Implemented `demonstrate_copying()` using Python's `copy` and `deepcopy` modules to analyze nested mutable data behavior.
