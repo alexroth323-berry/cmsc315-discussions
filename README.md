@@ -1,32 +1,33 @@
-# CMSC 315: Data Structures and Algorithms — Discussion Exercises
+# Unit 3 Discussion: List Operations
 
-Welcome! This repository serves as a centralized archive for my weekly programming discussion posts, implementations, and code experiments throughout **CMSC 315 (Data Structures and Analysis)**.
+## Overview
+This project examines fundamental operations on Python list structures, including element insertion, deletion, linear searching, and edge case handling. It demonstrates how underlying array-backed memory structures behave when elements are shifted during updates.
 
----
+## Completed Requirements
 
-## Repository Structure & Navigation
+1. **Insertion Operations (`insert_at`)**
+   - Tested insertions at the beginning (index `0`), middle, and end of the list.
+   - Documented $O(n)$ time complexity for front/middle insertions due to memory element shifting vs. $O(1)$ amortized time complexity for appending at the end.
 
-To keep the project clean and modular, each unit's code and accompanying write-ups are organized into dedicated feature branches rather than cluttering the root directory.
+2. **Deletion Operations (`delete_at`)**
+   - Implemented boundary validation checks (`0 <= index < len(lst)`) to prevent `IndexError` exceptions.
+   - Tested deletions across initial, middle, and trailing indices.
 
-### Quick Branch Directory
+3. **Search Operations (`search_value`)**
+   - Implemented a sequential linear search algorithm returning the matching index or `-1` if absent.
+   - Documented the $O(n)$ worst-case time complexity required when inspecting unindexed sequences.
 
-| Unit | Topic Focus | Branch Link | Key Concepts / File |
-| :--- | :--- | :--- | :--- |
-| **Unit 1** | Object-Oriented Programming, Namespaces & Copying | [`unit1`](../../tree/unit1) | `unit1_discussion.py` — Inheritance, class variables, shallow vs. deep copy |
-| **Unit 2** | Stacks and Queues | [`unit2`](../../tree/unit2) | `unit2_discussion.py` — LIFO Stack & FIFO Queue implementations with `deque` |
-| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | Recursive data parsing & traversal |
-| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_trees.py` — Recursive insert, search, in-order traversal & edge cases |
-| **Unit 5** | *Upcoming Topic* | `unit5` | *TBD* |
+4. **Edge Case Handling**
+   - Handled deletion attempts on empty collections.
+   - Validated behavior during out-of-bounds index insertion requests.
 
----
+## Discussion Board Reflection
 
-## Usage & How to View
+### 1. What concepts or skills did you learn while completing this assignment?
+While completing this assignment, I deepened my understanding of how list operations impact memory and runtime efficiency. I learned how Python manages dynamic arrays under the hood, specifically how inserting or deleting items at arbitrary index positions forces subsequent elements to shift in memory. I also practiced writing defensive code by validating index boundaries before mutating lists to prevent runtime `IndexError` exceptions.
 
-You can switch between weekly submissions using the branch selector menu at the top left of the repository page, or clone a specific branch locally:
+### 2. What challenges did you encounter, and how did you overcome them?
+One challenge was ensuring robust edge case handling when operating on empty or out-of-bounds indices. I overcame this by implementing explicit condition checks (`if index < 0 or index >= len(lst)`) prior to invoking deletion methods, ensuring the application handles invalid input gracefully without crashing.
 
-```bash
-# Clone the repository
-git clone [https://github.com/Argillego/cmsc315_discussions.git](https://github.com/Argillego/cmsc315_discussions.git)
-
-# Switch to a specific unit's branch
-git checkout unit4
+### 3. How do list operations impact performance in real-world applications?
+In real-world applications like media streaming queues or shopping carts, list operation choice directly impacts responsiveness. Frequently inserting or deleting items at the beginning of large array-backed lists incurs significant $O(n)$ shifting overhead, which can degrade performance compared to alternative structures like linked lists or double-ended queues (`collections.deque`).
