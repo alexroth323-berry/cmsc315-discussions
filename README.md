@@ -1,32 +1,26 @@
-# CMSC 315: Data Structures and Algorithms — Discussion Exercises
+# Unit 5 Discussion: Search Algorithms
 
-Welcome! This repository serves as a centralized archive for my weekly programming discussion posts, implementations, and code experiments throughout **CMSC 315 (Data Structures and Analysis)**.
+## Overview
 
----
+This assignment compares linear search and binary search.
 
-## Repository Structure & Navigation
+## Learning Objectives
 
-To keep the project clean and modular, each unit's code and accompanying write-ups are organized into dedicated feature branches rather than cluttering the root directory.
+- Implement linear search[cite: 8]
+- Implement binary search[cite: 8]
+- Compare performance[cite: 8]
+- Analyze algorithm efficiency[cite: 8]
 
-### Quick Branch Directory
+## Requirements
 
-| Unit | Topic Focus | Branch Link | Key Concepts / File |
-| :--- | :--- | :--- | :--- |
-| **Unit 1** | Object-Oriented Programming, Namespaces & Copying | [`unit1`](../../tree/unit1) | `unit1_discussion.py` — Inheritance, class variables, shallow vs. deep copy |
-| **Unit 2** | Stacks and Queues | [`unit2`](../../tree/unit2) | `unit2_discussion.py` — LIFO Stack & FIFO Queue implementations with deque |
-| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | `unit3_discussion.py` - Recursive data parsing & traversal |
-| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_discussion.py` — Recursive insert, search, in-order traversal & edge cases |
-| **Unit 5** | Searching Algorithms (Linear vs. Binary Search) | [`unit5`](../../tree/unit5) | `unit5_discussion.py` — Linear & binary search implementations, $O(n)$ vs $O(\log n)$ performance analysis, dataset size comparison & edge cases |
+1. Test both algorithms on a small dataset.[cite: 8]
+2. Test both algorithms on a large dataset.[cite: 8]
+3. Demonstrate edge cases.[cite: 8]
+4. Analyze performance.[cite: 8]
+5. Create a real-world search scenario.[cite: 8]
 
----
+## Discussion Board Reflection
 
-## Usage & How to View
+Throughout this assignment, I learned how to implement and compare linear and binary search algorithms in Python, analyzing their respective $O(n)$ and $O(\log n)$ time complexities. A key challenge I encountered was correctly managing pointer indices (`low`, `high`, and `mid`) during binary search to prevent infinite loops or missing edge cases on empty and single-element lists. I overcame this by carefully tracing boundary conditions and ensuring the loop termination condition (`low <= high`) was robust.
 
-You can switch between weekly submissions using the branch selector menu at the top left of the repository page, or clone a specific branch locally:
-
-```bash
-# Clone the repository
-git clone [https://github.com/Argillego/cmsc315_discussions.git](https://github.com/Argillego/cmsc315_discussions.git)
-
-# Switch to a specific unit's branch
-git checkout unit4
+In practice, linear search is best suited for small or unsorted datasets where the overhead of sorting outweighs search efficiency. Conversely, binary search is highly efficient for large, sorted collections such as database indexes or phone directories, slashing search times exponentially. However, the primary tradeoff for binary search is that the data must be kept in a sorted order, which introduces significant insertion and sorting overhead ($O(n \log n)$) if the dataset is frequently modified.
