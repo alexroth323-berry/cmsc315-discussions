@@ -4,7 +4,7 @@ Welcome! This repository serves as a centralized archive for my weekly programmi
 
 ---
 
-##  Repository Structure & Navigation
+## Repository Structure & Navigation
 
 To keep the project clean and modular, each unit's code and accompanying write-ups are organized into dedicated feature branches rather than cluttering the root directory.
 
