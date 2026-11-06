@@ -14,8 +14,8 @@ To keep the project clean and modular, each unit's code and accompanying write-u
 | :--- | :--- | :--- | :--- |
 | **Unit 1** | Object-Oriented Programming, Namespaces & Copying | [`unit1`](../../tree/unit1) | `unit1_discussion.py` — Inheritance, class variables, shallow vs. deep copy |
 | **Unit 2** | Stacks and Queues | [`unit2`](../../tree/unit2) | `unit2_discussion.py` — LIFO Stack & FIFO Queue implementations with `deque` |
-| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | `unit3_discussions.py` - Recursive data parsing & traversal |
-| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_trees.py` — Recursive insert, search, in-order traversal & edge cases |
+| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | `unit3_discussion.py` - Recursive data parsing & traversal |
+| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_discussion.py` — Recursive insert, search, in-order traversal & edge cases |
 | **Unit 5** |  | `unit5` |  |
 
 ---
