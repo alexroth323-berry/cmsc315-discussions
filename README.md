@@ -1,32 +1,28 @@
-# CMSC 315: Data Structures and Algorithms — Discussion Exercises
+# Unit 6 Discussion: Dictionaries as Hash Tables
 
-Welcome! This repository serves as a centralized archive for my weekly programming discussion posts, implementations, and code experiments throughout **CMSC 315 (Data Structures and Analysis)**.
+## Overview
 
----
+This assignment used Python dictionaries to demonstrate hash table behavior through a peak-hour restaurant reservation lookup system.
 
-## Repository Structure & Navigation
+## Learning Objectives
 
-To keep the project clean and modular, each unit's code and accompanying write-ups are organized into dedicated feature branches rather than cluttering the root directory.
+- Inserted key-value pairs
+- Retrieved values efficiently
+- Updated existing values
+- Removed entries
+- Understood hashing concepts
 
-### Quick Branch Directory
+## Requirements
 
-| Unit | Topic Focus | Branch Link | Key Concepts / File |
-| :--- | :--- | :--- | :--- |
-| **Unit 1** | Object-Oriented Programming, Namespaces & Copying | [`unit1`](../../tree/unit1) | `unit1_discussion.py` — Inheritance, class variables, shallow vs. deep copy |
-| **Unit 2** | Stacks and Queues | [`unit2`](../../tree/unit2) | `unit2_discussion.py` — LIFO Stack & FIFO Queue implementations with deque |
-| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | `unit3_discussion.py` - Recursive data parsing & traversal |
-| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_discussion.py` — Recursive insert, search, in-order traversal & edge cases |
-| **Unit 5** | Searching Algorithms (Linear vs. Binary Search) | [`unit5`](../../tree/unit5) | `unit5_discussion.py` — Linear & binary search implementations, $O(n)$ vs $O(\log n)$ performance analysis, dataset size comparison & edge cases |
+1. Created and populated a dictionary.
+2. Demonstrated lookup operations.
+3. Demonstrated update operations.
+4. Demonstrated delete operations.
+5. Tested edge cases.
+6. Created a real-world scenario.
 
----
+## Discussion Board Reflection
 
-## Usage & How to View
+While completing this assignment, I practiced how Python dictionaries use key hashing and internal bucket slots to support fast insertions, lookups, updates, and deletions, as well as how to handle missing keys safely using `.get()` and `.pop()` defaults. One challenge I worked through was making sure updating an existing reservation code overwrote the entry cleanly without creating duplicate records, and ensuring missing-key lookups and removals avoided raising `KeyError` exceptions.
 
-You can switch between weekly submissions using the branch selector menu at the top left of the repository page, or clone a specific branch locally:
-
-```bash
-# Clone the repository
-git clone [https://github.com/alexroth323-berry/cmsc315_discussions.git](https://github.com/alexroth323-berry/cmsc315_discussions.git)
-
-# Switch to a specific unit's branch
-git checkout unit4
+A hash table maps keys through a hash function to compute an index for storing and retrieving values directly rather than scanning items sequentially. Collisions happen when two different keys hash to the same slot or probe path, which can lengthen lookup chains or probing sequences as load increases. In real-world systems like restaurant reservation tables, e-commerce catalogs, or social media profiles, hash tables improve efficiency by delivering average $O(1)$ constant-time access, keeping response times fast even during peak traffic.
