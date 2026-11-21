@@ -18,6 +18,7 @@ To keep the project clean and modular, each unit's code and accompanying write-u
 | **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_discussion.py` — Recursive insert, search, in-order traversal & edge cases |
 | **Unit 5** | Searching Algorithms (Linear vs. Binary Search) | [`unit5`](../../tree/unit5) | `unit5_discussion.py` — Linear & binary search implementations, $O(n)$ vs $O(\log n)$ performance analysis, dataset size comparison & edge cases |
 | **Unit 6** | Hash Tables (Python Dictionaries) | [`unit6`](../../tree/unit6) | `unit6_discussion.py` — Key-value insertion, lookup, update, deletion, collision analysis & missing-key edge cases |
+| **Unit 7** | Sorting Algorithms (Bubble Sort vs. Merge Sort) | [`unit7`](../../tree/unit7) | `unit7_discussion.py` — Iterative Bubble Sort & recursive Merge Sort implementations, $O(n^2)$ vs $O(n \log n)$ scalability, multi-dataset comparison & edge cases |
 
 ---
 
