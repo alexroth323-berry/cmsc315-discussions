@@ -1,33 +1,26 @@
-# CMSC 315: Data Structures and Algorithms — Discussion Exercises
+# Unit 7 Discussion: Sorting Algorithms
 
-Welcome! This repository serves as a centralized archive for my weekly programming discussion posts, implementations, and code experiments throughout **CMSC 315 (Data Structures and Analysis)**.
+## Overview
 
----
+This assignment compared Bubble Sort and Merge Sort in Python across multiple datasets and edge cases.
 
-## Repository Structure & Navigation
+## Learning Objectives
 
-To keep the project clean and modular, each unit's code and accompanying write-ups are organized into dedicated feature branches rather than cluttering the root directory.
+- Implemented Bubble Sort
+- Implemented Merge Sort
+- Understood divide-and-conquer
+- Compared algorithm efficiency
 
-### Quick Branch Directory
+## Requirements
 
-| Unit | Topic Focus | Branch Link | Key Concepts / File |
-| :--- | :--- | :--- | :--- |
-| **Unit 1** | Object-Oriented Programming, Namespaces & Copying | [`unit1`](../../tree/unit1) | `unit1_discussion.py` — Inheritance, class variables, shallow vs. deep copy |
-| **Unit 2** | Stacks and Queues | [`unit2`](../../tree/unit2) | `unit2_discussion.py` — LIFO Stack & FIFO Queue implementations with deque |
-| **Unit 3** | Recursion & Linked Structures | [`unit3`](../../tree/unit3) | `unit3_discussion.py` - Recursive data parsing & traversal |
-| **Unit 4** | Binary Search Trees (BST) | [`unit4`](../../tree/unit4) | `unit4_discussion.py` — Recursive insert, search, in-order traversal & edge cases |
-| **Unit 5** | Searching Algorithms (Linear vs. Binary Search) | [`unit5`](../../tree/unit5) | `unit5_discussion.py` — Linear & binary search implementations, $O(n)$ vs $O(\log n)$ performance analysis, dataset size comparison & edge cases |
-| **Unit 6** | Hash Tables (Python Dictionaries) | [`unit6`](../../tree/unit6) | `unit6_discussion.py` — Key-value insertion, lookup, update, deletion, collision analysis & missing-key edge cases |
+1. Tested Bubble Sort and Merge Sort.
+2. Used multiple datasets.
+3. Demonstrated edge cases.
+4. Analyzed performance.
+5. Created a real-world sorting example.
 
----
+## Discussion Board Reflection
 
-## Usage & How to View
+While completing this assignment, I implemented iterative Bubble Sort and recursive Merge Sort in Python, tested both algorithms on multiple datasets and edge cases, and analyzed how recursion and divide-and-conquer compare to adjacent-element swapping. One challenge I worked through was keeping the original input lists unmodified while ensuring both sorting functions handled empty lists, already-sorted lists, and duplicate values cleanly.
 
-You can switch between weekly submissions using the branch selector menu at the top left of the repository page, or clone a specific branch locally:
-
-```bash
-# Clone the repository
-git clone [https://github.com/alexroth323-berry/cmsc315_discussions.git](https://github.com/alexroth323-berry/cmsc315_discussions.git)
-
-# Switch to a specific unit's branch
-git checkout unit4
+Bubble Sort repeatedly compares and swaps neighboring elements, resulting in $O(n^2)$ average and worst-case time complexity due to nested loops, though an early-exit flag helps on already-sorted inputs. Merge Sort divides a list recursively into halves and merges sorted sublists in guaranteed $O(n \log n)$ time, at the cost of $O(n)$ extra memory for sublists and merged output. For large or peak-traffic workloads—such as ranking trending shows or personalized watchlists on a streaming platform—Merge Sort scales far better than Bubble Sort, whereas Bubble Sort is mainly suited to small lists or teaching basic comparison mechanics.
